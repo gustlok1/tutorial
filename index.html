@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/script.js"></script>
+    <title>Classes</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            height: 100vh;
+            width: 100%;
+        }
+        img{
+            height: 50px;
+            cursor: pointer;
+        }
+        #txtArea{
+            margin: 0 auto;
+            padding: 20px;
+            width: 50%;
+            height: 30vh;
+            font-size: 20px;
+        }
+        div{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <textarea name="text" id="txtArea" cols="30" rows="10"></textarea>
+        <img src="./img/copiar-alt.png" alt="copy" onclick="copiarTexto()">
+        <button></button>
+    </body>
+    <script>
+        nome = prompt("Digite um nome")
+
+        function trolagem(antes, depois){
+            var txtArea = document.getElementById("txtArea")
+            txtArea.innerHTML = txtArea.innerHTML + antes + nome + depois + "\n"
+        }
+        trolagem("Em piscina de piroca ", " nada de costas")
+        trolagem("Em floresta de caralho ", " pula de galho em galho")
+        trolagem("Em guerra de bumbum guloso ", " sai vitorioso")
+        trolagem("Em terra de canibal o prato preferido do ", " é pau")
+        trolagem("Em fábrica de vibrador ", " é testador")
+        trolagem("Em terra de tubarão gay ", " é tubarão rei")
+        trolagem("Em milharal de caralho ", " é o espantalho")
+        trolagem("Quando o assunto é buceta ", " só faz careta")
+        trolagem("Em terra de forasteiro ", " da o cu o dia inteiro")
+
+        function copiarTexto(){
+            textoCopiado = document.getElementById("txtArea")
+            textoCopiado.select()
+            document.execCommand("copy")
+        }
+    </script>   
+</body>
+
+</html>
